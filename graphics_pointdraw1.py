@@ -1,0 +1,27 @@
+# study how to use graphics modules
+import tkinter
+from graphics import*
+def main():
+    p=Point(50,60)
+    p1=Point(140,100)
+    print("p.getX()=",p.getX(),"p.getY()=",p.getY(),"p1.getX()=",p1.getX(),"p1.getY()=",p1.getY())
+    win=GraphWin('Shapes')
+    p.draw(win)
+    p1.draw(win)
+    center=Point(100,100)
+    circ=Circle(center,30)
+    circ.setFill('red')
+    circ.draw(win)
+    label=Text(center,"Red Circle")
+    label.draw(win)
+    rect=Rectangle(Point(30,30),Point(70,70))
+    rect.draw(win)
+    line=Line(Point(20,30),Point(180,165))
+    line.draw(win)
+    oval=Oval(Point(20,120),Point(180,199))
+    oval.draw(win)
+    circ1=Circle(center,40)
+    circ1.draw(win)
+    circ2=Circle(center,60)
+    circ2.draw(win)
+main()
